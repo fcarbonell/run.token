@@ -1,0 +1,4 @@
+services:
+#    runator_trad.example:
+#        class: Runator\TradBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

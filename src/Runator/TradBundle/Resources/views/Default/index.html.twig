@@ -1,0 +1,28 @@
+{% extends 'RunatorTradBundle::layout.html.twig' %}
+
+{% block title %}Runator - Tokens{% endblock %}
+
+{% block content_header '' %}
+
+{% block content %}
+    
+    <h1 class="title">Traducción de Tokens!</h1>
+	<div class="symfony-blocks-welcome">
+        <div class="block-quick-tour">
+            <div class="illustration">
+               <img src="{{ asset('bundles/acmedemo/images/welcome-configure.gif') }}" alt="Accede a la plataforma" />
+            </div>
+            {# <a href="{{ path('runator_trad_admin') }}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg">Admin</span>
+                    </span>
+                </span>
+            </a> #}
+        </div>
+    </div>
+
+    <div class="symfony-blocks-help">
+    	<p>Realizado por Fernando Carbonell</p>
+    </div>
+{% endblock %}

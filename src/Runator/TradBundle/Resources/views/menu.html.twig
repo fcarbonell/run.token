@@ -1,0 +1,52 @@
+        <div class="menu">
+            <a href="{{ path('runator_trad_homepage')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Home" title="Home">Home</span>
+                    </span>
+                </span>
+            </a>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            |
+            <a href="{{ path('runator_trad_admin')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Admin" title="Admin">Admin</span>
+                    </span>
+                </span>
+            </a>
+            |
+            <a href="{{ path('fos_user_security_logout')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Logout" title="Logout">Logout</span>
+                    </span>
+                </span>
+            </a>
+            {% else %}
+            |
+            <a href="{{ path('fos_user_security_login')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Login" title="Login">Login</span>
+                    </span>
+                </span>
+            </a>
+            |
+            <a href="{{ path('fos_user_resetting_request')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Login" title="Login">Forgot Password</span>
+                    </span>
+                </span>
+            </a>
+            |
+            <a href="{{ path('fos_user_registration_register')}}" class="sf-button sf-button-selected">
+                <span class="border-l">
+                    <span class="border-r">
+                        <span class="btn-bg" alt="Login" title="Login">Register</span>
+                    </span>
+                </span>
+            </a>
+            {% endif %}
+        </div>

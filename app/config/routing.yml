@@ -1,0 +1,10 @@
+runator_trad:
+    resource: "@RunatorTradBundle/Resources/config/routing.yml"
+    prefix:   /
+runator_user:
+    resource: "@RunatorUserBundle/Resources/config/routing.yml"
+    prefix:   /
+#fos_user
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

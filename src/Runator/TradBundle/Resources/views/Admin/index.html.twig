@@ -1,0 +1,55 @@
+{% extends 'RunatorTradBundle::layout.html.twig' %}
+
+{% block title %}Runator - Admin Tokens{% endblock %}
+
+{% block content_header '' %}
+
+{% block content %}
+    
+    <h1 class="title">Administrador de Tokens!</h1>
+    <div style="width:100%">
+    	<div style="width:50%;float:left;margin-bottom:15px;">
+    		<p>Insertar Token</p>
+		    {{ form(form) }}
+    	</div>
+    	<div style="width:50%;float:left;margin-bottom:15px;">
+    		<p>Insertar Idiomas</p>
+		    {{ form(formIdiomas) }}
+    	</div>
+    </div>
+    <br>
+    <br>
+    <div class="datagrid">
+	    <table>
+			<thead>
+				<tr>
+					<th>&nbsp;&nbsp;</th>
+					<th>TOKEN</th>
+					<th>LANGUAGE</th>
+					<th>NAME</th>
+					<th>&nbsp;&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+		    {% for translate in translates %}
+		    	<tr>
+		    		<td>{{ loop.index }}</td>
+		    		<td>{{ translate.token }}</td>
+		    		<td>{{ translate.language }}</td>
+		    		<td>{{ translate.name }}</td>
+		    		<td>
+		    			<a href="{{ path('runator_trad_delete',{'token':translate.token,'language':translate.language}) }}" class="sf-button sf-button-selected">
+			                <span class="border-l">
+			                    <span class="border-r">
+			                        <span class="btn-bg" alt="Eliminar" title="Eliminar">X</span>
+			                    </span>
+			                </span>
+			            </a>
+		    		</td>
+		    	</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	</table>    
+{% endblock %}

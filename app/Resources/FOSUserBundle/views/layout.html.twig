@@ -1,0 +1,51 @@
+{% extends "TwigBundle::layout.html.twig" %}
+
+{% block head %}
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/runatortrad/css/demo.css') }}" />
+    <style >
+
+    </style>
+{% endblock %}
+
+{% block title 'Demo Bundle' %}
+
+{% block body %}
+
+    <div class="block">
+    
+        {% include 'RunatorTradBundle::menu.html.twig' %}
+        
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="flash-message">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="{{ type }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+
+        <div class="symfony-blocks-help">
+            <p>Realizado por Fernando Carbonell</p>
+        </div>
+
+        {% block content %}{% endblock %}
+    
+    </div>
+
+    {% if code is defined %}
+        <h2>Code behind this page</h2>
+        <div class="block">
+            <div class="symfony-content">{{ code|raw }}</div>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+runator_trad_homepage:
+    path:     /
+    defaults: { _controller: RunatorTradBundle:Default:index }
+runator_trad_admin:
+    path:     /admin
+    defaults: { _controller: RunatorTradBundle:Default:admin }
+runator_trad_delete:
+    path:     /admin/delete/{token}/{language}
+    defaults: { _controller: RunatorTradBundle:Default:delete }
+runator_forgot_password:
+    path:     /forgot-password/{email}
+    defaults: { _controller: RunatorTradBundle:Default:sendNewPassword }
+runator_tradtranslate:
+    path:     /translate/{id}
+    defaults: { _controller: RunatorTradBundle:Translate:getTranslate }
+#Api
+translate_all:
+    pattern:  /api/all-translates.{_format}
+    defaults: { _controller: RunatorTradBundle:Translate:getTranslates, _format: ~ }
+    requirements:
+        _method: GET
+translate_get:
+    pattern:  /api/translate.{_format}
+    defaults: { _controller: RunatorTradBundle:Translate:getTranslate, _format: ~ }
+    requirements:
+        _method: GET

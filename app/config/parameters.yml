@@ -1,0 +1,15 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: runator
+    database_user: runator
+    database_password: oooooo
+    mailer_transport: smtp
+    mailer_host: aspmx.l.google.com
+    mailer_user: runator.token@gmail.com
+    mailer_password: oooooooo81
+    mailer_port: 25
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt

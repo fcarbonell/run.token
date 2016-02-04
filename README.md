@@ -1,4 +1,4 @@
-Runator test - symfony
+Test - symfony
 ========================
 
 Crear un end point donde el usuario pueda hacer login con un email y una contraseña, y pueda crear su usuario desde otra sección así como hacer el forgot password y que por swift mailer le envie una nueva clave al usuario. Haciendo uso del secure area. Puedes usar fos user bundle si quieres. Usando doctrine y el orm de mysql de momento.
